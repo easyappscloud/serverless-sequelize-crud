@@ -1,0 +1,34 @@
+{
+  "name": "serverless-sequelize-crud",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "compile": "babel src --out-dir dist --ignore spec.js,test.js --copy-files"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vpsouza/restify-generic-resources.git"
+  },
+  "author": "Vinicius Piedade de Souza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vpsouza/restify-generic-resources/issues"
+  },
+  "engines": {
+    "node": ">=6.11.0"
+  },
+  "homepage": "https://github.com/vpsouza/restify-generic-resources#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-jest": "^20.0.3",
+    "babel-preset-es2015": "^6.24.1",
+    "jest": "^20.0.4"
+  },
+  "dependencies": {
+    "easyutils": "0.0.1",
+    "restify": "^4.3.0",
+    "restify-sequelize-validation": "^0.0.4"
+  }
+}
