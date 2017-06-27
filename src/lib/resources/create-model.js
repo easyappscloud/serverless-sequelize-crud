@@ -1,7 +1,7 @@
 
 'use strict';
 
-import restify from 'restify';
+import createError from 'http-errors';
 import {resolveSuccess, resolveError, getTenant} from 'easyutils';
 import {createModel} from '../services';
 
@@ -13,8 +13,8 @@ export default (appAuthSecret, server, modelName, models, logger) =>
 				createModel(server, modelName, models)
 			].reduce((chain, task) => chain.then(task), Promise.resolve([req.params.jwt, req.body]))
 				.then(result => resolveSuccess(res, result))
-				.catch(err => resolveError(res, new restify.InternalServerError(err), logger));
+				.catch(err => resolveError(res, createError(500, 'Internal Server Error', err), logger));
 		} else {
-			resolveError(res, new restify.BadRequestError('Invalid Request Body'), null);
+			resolveError(res, createError(400, 'Invalid Request Body'), null);
 		}
 	}

@@ -1,8 +1,5 @@
 'use strict';
 import {services,resources} from 'restify-generic-resources';
-//import * as services from './lib/services';
-//import * as resources from './lib/resources';
-import validating from 'restify-sequelize-validation';
 
 export const setupApi = (appAuthSecret, modelName, models) => ({
     ['readOne_' + modelName]: resources.getModelById(appAuthSecret, null, modelName, models),

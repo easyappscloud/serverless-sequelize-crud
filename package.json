@@ -1,6 +1,6 @@
 {
   "name": "serverless-sequelize-crud",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -28,7 +28,6 @@
   },
   "dependencies": {
     "easyutils": "0.0.1",
-    "restify": "^4.3.0",
-    "restify-sequelize-validation": "^0.0.4"
+    "http-errors": "^1.6.1"
   }
 }
